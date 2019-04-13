@@ -1,6 +1,6 @@
 # Code book del Proyecto Final del curso de Coursera *Getting and Cleaning Data*
 
-Al descargar los datos para desarrollar el proyecto (mediante el siguiente link:[Descarga de Datos](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#)) nos encontraremos con los siguientes archivos:
+Al descargar los datos para desarrollar el proyecto (mediante el siguiente link:[Descarga de Datos](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)) nos encontraremos con los siguientes archivos:
 
 - Las carpetas `test` y `train` donde se encuentran los archivos `X_test.txt`, `y_test.txt`, `subject_test.txt` y `X_train.txt`, `y_train.txt`, `subject_train.txt`. Los archivos `X` contienen las variables numéricas sobre las cuales se cuales se calcularan los promedios finales, por su parte los denominados con `y` representan las actividades realizadas numeradas del 1 al 6, finalmente los archivos con el prefijo `subject` identifican a los individuos.
 - El archivo `activity_labels.txt` contiene los nombres de las actividades.
@@ -24,4 +24,4 @@ Las asignaciones pautadas para este proyecto desarrolladas en el script `analysi
 - 4) Para que los nombres de las variables tengan un sentido más descriptivo e interpretativo, se buscan las abreviaciones que contienen los nombres de las columnas a los que se hacen referencia en el archivo `features_info.txt` y se establecen los patrones y sus respectivos remplazos mediante la funcion `str_replace_all`.
 - 5) Para calcular los promedios únicos para todas las variables categóricas por actividad e individuo, se hace uso de la función `gruop_by` para agrupar por actividad e individuo y a través de la función `summarise_all` se calcula el promedio para el resto de las variables, todo esto mediante los operadores `%>%` del paquete `tidyverse`.
 
-Finalmente se obtiene el archivo `tidy.txt` que consta de 180 observaciones y 69 columnas.
+Finalmente se obtiene el archivo `tidy.txt` que consta de 180 observaciones y 68 columnas.
